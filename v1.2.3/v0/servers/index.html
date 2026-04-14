@@ -44,10 +44,38 @@
 					"isLatest": true
 				}
 			}
+		},
+		{
+			"server": {
+				"$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+				"name": "io.podman.mcp",
+				"description": "MCP Server for Podman container management - create, read, update, and delete containers",
+				"repository": {
+					"id": "podman-mcp-server",
+					"url": "https://github.com/manusa/podman-mcp-server",
+					"source": "github"
+				},
+				"version": "1.0.0",
+				"remotes": [
+					{
+						"type": "stdio",
+						"command": "npx",
+						"args": ["-y", "podman-mcp-server@latest"]
+					}
+				]
+			},
+			"_meta": {
+				"io.modelcontextprotocol.registry/official": {
+					"status": "active",
+					"publishedAt": "2024-11-20T00:00:00Z",
+					"updatedAt": "2024-11-20T00:00:00Z",
+					"isLatest": true
+				}
+			}
 		}
 	],
 	"metadata": {
 		"nextCursor": "",
-		"count": 1
+		"count": 2
 	}
 }
