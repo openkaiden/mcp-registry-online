@@ -1,0 +1,31 @@
+{
+	"server": {
+		"$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+		"name": "ai.openkaiden.registry/podman",
+		"description": "MCP server for container runtimes (Podman and Docker)",
+		"repository": {
+			"url": "https://github.com/manusa/podman-mcp-server",
+			"source": "github"
+		},
+		"version": "0.0.15",
+		"packages": [
+			{
+				"registryType": "npm",
+				"identifier": "podman-mcp-server",
+				"version": "0.0.15",
+				"runtimeHint": "npx",
+				"transport": {
+					"type": "stdio"
+				}
+			}
+		]
+	},
+	"_meta": {
+		"io.modelcontextprotocol.registry/official": {
+			"status": "active",
+			"publishedAt": "2026-05-05T00:00:00Z",
+			"updatedAt": "2026-05-05T00:00:00Z",
+			"isLatest": true
+		}
+	}
+}
