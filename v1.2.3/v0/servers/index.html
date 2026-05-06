@@ -74,10 +74,266 @@
 					"isLatest": true
 				}
 			}
+		},
+		{
+			"server": {
+				"$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+				"name": "ai.openkaiden.registry/linux",
+				"description": "Tools to allow LLM clients to interact with Linux systems remotely",
+				"repository": {
+					"url": "https://github.com/rhel-lightspeed/linux-mcp-server",
+					"source": "github"
+				},
+				"version": "1.4.1",
+				"packages": [
+					{
+						"registryType": "pypi",
+						"identifier": "linux-mcp-server",
+						"version": "1.4.1",
+						"runtimeHint": "uvx",
+						"transport": {
+							"type": "stdio"
+						}
+					}
+				]
+			},
+			"_meta": {
+				"io.modelcontextprotocol.registry/official": {
+					"status": "active",
+					"publishedAt": "2026-05-05T00:00:00Z",
+					"updatedAt": "2026-05-05T00:00:00Z",
+					"isLatest": true
+				}
+			}
+		},
+		{
+			"server": {
+				"$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+				"name": "ai.openkaiden.registry/playwright",
+				"description": "Playwright MCP server for browser automation using accessibility snapshots",
+				"repository": {
+					"url": "https://github.com/microsoft/playwright-mcp",
+					"source": "github"
+				},
+				"version": "0.0.73",
+				"packages": [
+					{
+						"registryType": "npm",
+						"identifier": "@playwright/mcp",
+						"version": "0.0.73",
+						"runtimeHint": "npx",
+						"transport": {
+							"type": "stdio"
+						}
+					}
+				]
+			},
+			"_meta": {
+				"io.modelcontextprotocol.registry/official": {
+					"status": "active",
+					"publishedAt": "2026-05-05T00:00:00Z",
+					"updatedAt": "2026-05-05T00:00:00Z",
+					"isLatest": true
+				}
+			}
+		},
+		{
+			"server": {
+				"$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+				"name": "ai.openkaiden.registry/grafana",
+				"description": "MCP server for Grafana observability platform",
+				"repository": {
+					"url": "https://github.com/grafana/mcp-grafana",
+					"source": "github"
+				},
+				"version": "0.13.0",
+				"packages": [
+					{
+						"registryType": "pypi",
+						"identifier": "mcp-grafana",
+						"version": "0.13.0",
+						"runtimeHint": "uvx",
+						"transport": {
+							"type": "stdio"
+						},
+						"environmentVariables": [
+							{
+								"name": "GRAFANA_URL",
+								"description": "Grafana instance URL (e.g. http://localhost:3000)",
+								"isRequired": true,
+								"isSecret": false,
+								"format": "string"
+							},
+							{
+								"name": "GRAFANA_SERVICE_ACCOUNT_TOKEN",
+								"description": "Grafana service account token for authentication",
+								"isRequired": true,
+								"isSecret": true,
+								"format": "string"
+							}
+						]
+					}
+				]
+			},
+			"_meta": {
+				"io.modelcontextprotocol.registry/official": {
+					"status": "active",
+					"publishedAt": "2026-05-05T00:00:00Z",
+					"updatedAt": "2026-05-05T00:00:00Z",
+					"isLatest": true
+				}
+			}
+		},
+		{
+			"server": {
+				"$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+				"name": "ai.openkaiden.registry/atlassian",
+				"description": "Remote MCP Server connecting Jira and Confluence with LLMs and IDEs",
+				"repository": {
+					"url": "https://github.com/atlassian/atlassian-mcp-server",
+					"source": "github"
+				},
+			"version": "1.0.0",
+			"remotes": [
+				{
+					"type": "streamable-http",
+					"url": "https://mcp.atlassian.com/v1/mcp",
+					"headers": [
+						{
+							"name": "Authorization",
+							"value": "Bearer {atlassian_token}",
+							"description": "Header used for authentication",
+							"isRequired": true,
+							"isSecret": false,
+							"format": "string",
+							"variables": {
+								"atlassian_token": {
+									"description": "Atlassian API token or OAuth access token https://support.atlassian.com/atlassian-rovo-mcp-server/docs/authentication-and-authorization/",
+									"isRequired": true,
+									"isSecret": true,
+									"format": "string"
+								}
+							}
+						}
+					]
+				}
+			]
+			},
+			"_meta": {
+				"io.modelcontextprotocol.registry/official": {
+					"status": "active",
+					"publishedAt": "2026-05-05T00:00:00Z",
+					"updatedAt": "2026-05-05T00:00:00Z",
+					"isLatest": true
+				}
+			}
+		},
+		{
+			"server": {
+				"$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+				"name": "ai.openkaiden.registry/fetch",
+				"description": "MCP server providing tools to fetch and convert web content for LLMs",
+				"repository": {
+					"url": "https://github.com/modelcontextprotocol/servers",
+					"source": "github",
+					"subfolder": "src/fetch"
+				},
+				"version": "2025.4.7",
+				"packages": [
+					{
+						"registryType": "pypi",
+						"identifier": "mcp-server-fetch",
+						"version": "2025.4.7",
+						"runtimeHint": "uvx",
+						"transport": {
+							"type": "stdio"
+						}
+					}
+				]
+			},
+			"_meta": {
+				"io.modelcontextprotocol.registry/official": {
+					"status": "active",
+					"publishedAt": "2026-05-05T00:00:00Z",
+					"updatedAt": "2026-05-05T00:00:00Z",
+					"isLatest": true
+				}
+			}
+		},
+		{
+			"server": {
+				"$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+				"name": "ai.openkaiden.registry/podman",
+				"description": "MCP server for container runtimes (Podman and Docker)",
+				"repository": {
+					"url": "https://github.com/manusa/podman-mcp-server",
+					"source": "github"
+				},
+				"version": "0.0.15",
+				"packages": [
+					{
+						"registryType": "npm",
+						"identifier": "podman-mcp-server",
+						"version": "0.0.15",
+						"runtimeHint": "npx",
+						"transport": {
+							"type": "stdio"
+						}
+					}
+				]
+			},
+			"_meta": {
+				"io.modelcontextprotocol.registry/official": {
+					"status": "active",
+					"publishedAt": "2026-05-05T00:00:00Z",
+					"updatedAt": "2026-05-05T00:00:00Z",
+					"isLatest": true
+				}
+			}
+		},
+		{
+			"server": {
+				"$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+				"name": "ai.openkaiden.registry/notion",
+				"description": "Official Notion MCP Server",
+				"repository": {
+					"url": "https://github.com/makenotion/notion-mcp-server",
+					"source": "github"
+				},
+				"version": "2.2.1",
+				"packages": [
+					{
+						"registryType": "npm",
+						"identifier": "@notionhq/notion-mcp-server",
+						"version": "2.2.1",
+						"runtimeHint": "npx",
+						"transport": {
+							"type": "stdio"
+						},
+						"environmentVariables": [
+							{
+								"name": "NOTION_API_KEY",
+								"description": "Notion integration token from https://www.notion.so/my-integrations",
+								"isRequired": true,
+								"isSecret": true,
+								"format": "string"
+							}
+						]
+					}
+				]
+			},
+			"_meta": {
+				"io.modelcontextprotocol.registry/official": {
+					"status": "active",
+					"publishedAt": "2026-05-05T00:00:00Z",
+					"updatedAt": "2026-05-05T00:00:00Z",
+					"isLatest": true
+				}
+			}
 		}
 	],
 	"metadata": {
 		"nextCursor": "",
-		"count": 2
+		"count": 9
 	}
 }

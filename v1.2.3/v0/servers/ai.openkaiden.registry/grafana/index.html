@@ -1,0 +1,47 @@
+{
+	"server": {
+		"$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+		"name": "ai.openkaiden.registry/grafana",
+		"description": "MCP server for Grafana observability platform",
+		"repository": {
+			"url": "https://github.com/grafana/mcp-grafana",
+			"source": "github"
+		},
+		"version": "0.13.0",
+		"packages": [
+			{
+				"registryType": "pypi",
+				"identifier": "mcp-grafana",
+				"version": "0.13.0",
+				"runtimeHint": "uvx",
+				"transport": {
+					"type": "stdio"
+				},
+				"environmentVariables": [
+					{
+						"name": "GRAFANA_URL",
+						"description": "Grafana instance URL (e.g. http://localhost:3000)",
+						"isRequired": true,
+						"isSecret": false,
+						"format": "string"
+					},
+					{
+						"name": "GRAFANA_SERVICE_ACCOUNT_TOKEN",
+						"description": "Grafana service account token for authentication",
+						"isRequired": true,
+						"isSecret": true,
+						"format": "string"
+					}
+				]
+			}
+		]
+	},
+	"_meta": {
+		"io.modelcontextprotocol.registry/official": {
+			"status": "active",
+			"publishedAt": "2026-05-05T00:00:00Z",
+			"updatedAt": "2026-05-05T00:00:00Z",
+			"isLatest": true
+		}
+	}
+}

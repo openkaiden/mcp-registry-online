@@ -1,0 +1,31 @@
+{
+	"server": {
+		"$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+		"name": "ai.openkaiden.registry/linux",
+		"description": "Tools to allow LLM clients to interact with Linux systems remotely",
+		"repository": {
+			"url": "https://github.com/rhel-lightspeed/linux-mcp-server",
+			"source": "github"
+		},
+		"version": "1.4.1",
+		"packages": [
+			{
+				"registryType": "pypi",
+				"identifier": "linux-mcp-server",
+				"version": "1.4.1",
+				"runtimeHint": "uvx",
+				"transport": {
+					"type": "stdio"
+				}
+			}
+		]
+	},
+	"_meta": {
+		"io.modelcontextprotocol.registry/official": {
+			"status": "active",
+			"publishedAt": "2026-05-05T00:00:00Z",
+			"updatedAt": "2026-05-05T00:00:00Z",
+			"isLatest": true
+		}
+	}
+}

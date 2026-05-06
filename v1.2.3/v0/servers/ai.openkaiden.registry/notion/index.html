@@ -1,0 +1,40 @@
+{
+	"server": {
+		"$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+		"name": "ai.openkaiden.registry/notion",
+		"description": "Official Notion MCP Server",
+		"repository": {
+			"url": "https://github.com/makenotion/notion-mcp-server",
+			"source": "github"
+		},
+		"version": "2.2.1",
+		"packages": [
+			{
+				"registryType": "npm",
+				"identifier": "@notionhq/notion-mcp-server",
+				"version": "2.2.1",
+				"runtimeHint": "npx",
+				"transport": {
+					"type": "stdio"
+				},
+				"environmentVariables": [
+					{
+						"name": "NOTION_API_KEY",
+						"description": "Notion integration token from https://www.notion.so/my-integrations",
+						"isRequired": true,
+						"isSecret": true,
+						"format": "string"
+					}
+				]
+			}
+		]
+	},
+	"_meta": {
+		"io.modelcontextprotocol.registry/official": {
+			"status": "active",
+			"publishedAt": "2026-05-05T00:00:00Z",
+			"updatedAt": "2026-05-05T00:00:00Z",
+			"isLatest": true
+		}
+	}
+}
